@@ -1,0 +1,204 @@
+<section class="season-one-section" id="season-one">
+
+    <div class="season-one-bg-orb orb-left"></div>
+    <div class="season-one-bg-orb orb-right"></div>
+
+    <!-- SECTION HEADING -->
+    <div class="section-heading centered light-heading reveal" appReveal>
+
+        <div class="section-kicker light-kicker">
+            <span>04</span>
+            <p>SEASON 01</p>
+        </div>
+
+        <h2>
+            We already lived it.
+            <span>Now relive it.</span>
+        </h2>
+
+        <p class="heading-description">
+            A few glimpses from the first season,the smiles, the awkward moments,
+            the conversations and everything in between.
+        </p>
+
+    </div>
+
+
+    <!-- VIDEO GRID -->
+    <div class="season-video-grid">
+
+        <!-- ==================== VIDEO 1 ==================== -->
+        <article class="season-video-card reveal" [class.video-active]="playing === 1" appReveal>
+
+            <div class="video-window">
+
+                <div class="video-placeholder">
+
+                    <div class="video-film-strip">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <div class="video-center">
+
+                        <span class="video-number">01</span>
+
+                        <button type="button" class="video-play"
+                            (click)="openVideo('https://youtu.be/Q6J8JJThZjM?si=P1s1pUx6RJBdj2lx')"
+                            aria-label="Open Season 1 YouTube video">
+                            ▶
+                        </button>
+
+                        <small>SEASON 1 VIDEO</small>
+
+                    </div>
+
+                    <div class="video-doodles">
+                        <span>♡</span>
+                        <span>✦</span>
+                        <span>☕</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="video-card-copy">
+
+                <div>
+                    <small>SEASON 01 / 01</small>
+
+                    <h3>
+                        The first hello.
+                    </h3>
+                </div>
+
+                <span>↗</span>
+
+            </div>
+
+        </article>
+
+
+        <!-- ==================== VIDEO 2 ==================== -->
+        <article class="season-video-card reveal" [class.video-active]="playing === 2" appReveal>
+
+            <div class="video-window">
+
+                <div class="video-placeholder">
+
+                    <div class="video-film-strip">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <div class="video-center">
+
+                        <span class="video-number">02</span>
+
+                        <button type="button" class="video-play"
+                            (click)="openVideo('https://www.instagram.com/reel/DV3kNZugYRp/?stkn=MTAwZ3FoOGsyNHg2cg==')"
+                            aria-label="Open Season 1 Instagram Reel">
+                            ▶
+                        </button>
+
+                        <small>SEASON 1 REEL</small>
+
+                    </div>
+
+                    <div class="video-doodles">
+                        <span>♡</span>
+                        <span>✦</span>
+                        <span>☕</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="video-card-copy">
+
+                <div>
+                    <small>SEASON 01 / 02</small>
+
+                    <h3>
+                        Date night energy.
+                    </h3>
+                </div>
+
+                <span>↗</span>
+
+            </div>
+
+        </article>
+
+
+        <!-- ==================== VIDEO 3 ==================== -->
+        <article class="season-video-card reveal" [class.video-active]="playing === 3" appReveal>
+
+            <div class="video-window">
+
+                <div class="video-placeholder">
+
+                    <div class="video-film-strip">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <div class="video-center">
+
+                        <span class="video-number">03</span>
+
+                        <button type="button" class="video-play" (click)="playing = playing === 3 ? null : 3"
+                            aria-label="Season 1 video 3">
+                            ▶
+                        </button>
+
+                        <small>SEASON 1 GLIMPSE</small>
+
+                    </div>
+
+                    <div class="video-doodles">
+                        <span>♡</span>
+                        <span>✦</span>
+                        <span>☕</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="video-card-copy">
+
+                <div>
+                    <small>SEASON 01 / 03</small>
+
+                    <h3>
+                        Moments that stayed.
+                    </h3>
+                </div>
+
+                <span>↗</span>
+
+            </div>
+
+        </article>
+
+    </div>
+
+
+    <!-- VIDEO NOTE -->
+    <div class="video-note reveal" appReveal>
+
+        <span>🎥</span>
+
+        <p>
+            Relive the moments from Season 1.
+        </p>
+
+    </div>
+
+</section>

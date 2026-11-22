@@ -1,0 +1,19 @@
+<section id="fashion">
+    <div class="wrap">
+        <div class="eyebrow">Fashion Partnership</div>
+        <h2 class="reveal" appReveal style="font-size:clamp(24px,3.6vw,38px);max-width:640px;margin-bottom:14px;">Don't
+            just sponsor the show. Become part of it.</h2>
+        <p class="reveal" appReveal
+            style="color:var(--text-dim);font-size:15px;max-width:600px;line-height:1.7;margin-bottom:36px;">Patro Patri
+            Chai is built around people, personalities and visual storytelling — fashion can naturally become part of
+            that story rather than sit beside it as an ad.</p>
+        <div class="fit-grid reveal" appReveal>
+            <div class="fit-card" *ngFor="let fit of fits">
+                <h5>{{fit[0]}}</h5>
+                <p>{{fit[1]}}</p>
+            </div>
+        </div>
+        <div class="custom-note reveal" appReveal>Every collaboration can be customized around the brand's goals,
+            products and preferred visibility — none of the above are guaranteed deliverables until agreed.</div>
+    </div>
+</section>

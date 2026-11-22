@@ -1,0 +1,40 @@
+:host {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 3;
+}
+.three-stage {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  background: transparent;
+}
+.three-stage canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  background: transparent;
+  pointer-events: none;
+}
+/* Keep the rendered people in front of the landing cards. */
+:host,
+.three-stage,
+.three-stage canvas {
+  pointer-events: none;
+}
+/* On smaller screens, keep the models visible without covering all the text. */
+@media (max-width: 760px) {
+  :host {
+    z-index: 1;
+    opacity: 0.78;
+  }
+}

@@ -1,0 +1,111 @@
+<div class="bibaho-experience" id="bibaho-top">
+  
+<button
+  class="bibaho-back-button"
+  type="button"
+  (click)="goToLanding()"
+  aria-label="Back to main landing page">
+  <span aria-hidden="true">←</span>
+  <span>Back</span>
+</button>
+
+  <div class="bibaho-grain" aria-hidden="true"></div>
+
+  
+  <header class="bibaho-nav" [class.is-scrolled]="scrolled">
+    <a class="bibaho-brand" href="/bibaho" (click)="goToTop($event)" aria-label="Bibaho home">
+      <span class="brand-flower">✳</span>
+      PATRO PATRI CHAI <small>· BIBAHO</small>
+    </a>
+
+    <nav class="bibaho-nav-links" aria-label="Bibaho navigation">
+      <a href="#story" (click)="scrollToSection($event, 'story')">
+        Our story
+      </a>
+      <a href="#matchmaking" (click)="scrollToSection($event, 'matchmaking')">
+        Matchmaking
+      </a>
+      <a href="#weddings" (click)="scrollToSection($event, 'weddings')">
+        Weddings
+      </a>
+      <a href="#collection" (click)="scrollToSection($event, 'collection')">
+        Collections
+      </a>
+    </nav>
+
+    <a class="bibaho-nav-cta" href="#final" (click)="scrollToSection($event, 'final')">
+      Plan your day <span>↗</span>
+    </a>
+
+    <button class="bibaho-menu-toggle" type="button" (click)="menuOpen = !menuOpen" [attr.aria-expanded]="menuOpen"
+      aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <nav class="bibaho-mobile-menu" [class.open]="menuOpen">
+    <a href="#story" (click)="scrollToSection($event, 'story'); menuOpen = false">
+      Our story
+    </a>
+    <a href="#matchmaking" (click)="scrollToSection($event, 'matchmaking'); menuOpen = false">
+      Matchmaking
+    </a>
+    <a href="#weddings" (click)="scrollToSection($event, 'weddings'); menuOpen = false">
+      Weddings
+    </a>
+    <a href="#collection" (click)="scrollToSection($event, 'collection'); menuOpen = false">
+      Collections
+    </a>
+    <a href="#final" (click)="scrollToSection($event, 'final'); menuOpen = false">
+      Let's talk ↗
+    </a>
+  </nav>
+
+
+  <main>
+    <app-bibaho-hero></app-bibaho-hero>
+
+    <div class="bibaho-intro-art" aria-hidden="true">
+      <span>শুভ</span><i>✺</i><span>বিবাহ</span>
+    </div>
+
+    <div id="story" class="bibaho-anchor-section">
+      <app-bibaho-story-intro></app-bibaho-story-intro>
+      <app-bibaho-ecosystem></app-bibaho-ecosystem>
+      <app-bibaho-why></app-bibaho-why>
+      <app-bibaho-story></app-bibaho-story>
+    </div>
+
+    <div id="matchmaking" class="bibaho-anchor-section">
+      <app-bibaho-matchmaking></app-bibaho-matchmaking>
+      <app-bibaho-ways-in></app-bibaho-ways-in>
+    </div>
+
+    <div id="weddings" class="bibaho-anchor-section">
+      <app-bibaho-weddings></app-bibaho-weddings>
+    </div>
+
+    <div id="collection" class="bibaho-anchor-section">
+      <app-bibaho-collection></app-bibaho-collection>
+      <app-bibaho-worlds></app-bibaho-worlds>
+      <app-bibaho-bespoke></app-bibaho-bespoke>
+      <app-bibaho-trust></app-bibaho-trust>
+      <app-bibaho-future></app-bibaho-future>
+    </div>
+
+    <div class="bibaho-marquee" aria-hidden="true">
+      <div>
+        Beautiful ✳ Organised ✳ Personal ✳ Culturally intelligent ✳
+        Properly executed ✳ Beautiful ✳ Organised ✳ Personal ✳
+      </div>
+    </div>
+
+    <div id="final" class="bibaho-anchor-section">
+      <app-bibaho-contact></app-bibaho-contact>
+    </div>
+  </main>
+
+  <footer class="bibaho-footer"><span>✳ PATRO PATRI CHAI · KOLKATA</span><span>Every love story deserves a beautiful
+      beginning.</span><a href="#bibaho-top">Back to top ↑</a></footer>
+</div>

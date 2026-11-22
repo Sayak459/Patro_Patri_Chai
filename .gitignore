@@ -1,0 +1,18 @@
+/node_modules/
+/dist/
+/.angular/
+/coverage/
+/.nx/
+
+# Local environment and credentials
+.env
+.env.*
+!.env.example
+
+# Editor and operating-system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.log
+npm-debug.log*

@@ -1,0 +1,18 @@
+﻿<div class="app dating-app">
+  <button class="back-to-landing dating-back" routerLink="/">â† Back</button>
+  <app-dating-navbar [menuOpen]="menuOpen" (menuChange)="setMenu($event)" (register)="openRegister()"></app-dating-navbar>
+  <main>
+    <app-dating-hero (register)="openRegister()"></app-dating-hero>
+    <app-dating-marquee></app-dating-marquee>
+    <app-dating-season-two (register)="openRegister()"></app-dating-season-two>
+    <app-dating-about></app-dating-about>
+    <app-dating-journey></app-dating-journey>
+    <app-dating-rewards (register)="openRegister()"></app-dating-rewards>
+    <app-dating-season-one></app-dating-season-one>
+    <app-dating-stories></app-dating-stories>
+    <app-dating-creator></app-dating-creator>
+    <app-dating-register-banner (register)="openRegister()"></app-dating-register-banner>
+  </main>
+  <app-dating-footer (register)="openRegister()"></app-dating-footer>
+  <app-dating-register-modal *ngIf="registerOpen" (close)="closeRegister()"></app-dating-register-modal>
+</div>

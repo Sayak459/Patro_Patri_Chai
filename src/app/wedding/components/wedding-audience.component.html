@@ -1,0 +1,27 @@
+<section id="audience">
+    <div class="wrap">
+        <div class="eyebrow">Audience</div>
+        <h2 class="reveal" appReveal style="font-size:clamp(24px,3.6vw,36px);max-width:600px;margin-bottom:8px;">The
+            audience is already here.</h2>
+        <div class="snapshot-tag">Instagram · 30-Day Insights Snapshot</div>
+        <div class="ig-banner reveal" appReveal>
+            <div class="big">85.7%</div>
+            <div class="desc">of Instagram views came from non-followers — showing discovery well beyond the existing
+                audience. Alongside <strong style="color:var(--text)">79.6%</strong> of the audience aged 18–34 and
+                <strong style="color:var(--text)">64% women</strong>, this is a fashion-relevant, actively growing
+                audience.</div>
+        </div>
+        <div class="kpi-grid reveal" appReveal>
+            <div class="kpi" *ngFor="let stat of stats"><span class="num">{{stat[0]}}</span><span
+                    class="label">{{stat[1]}}</span></div>
+        </div>
+        <div class="reveal" appReveal>
+            <p
+                style="font-family:'Space Mono',monospace;font-size:11.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--text-faint);margin-top:36px;margin-bottom:14px;">
+                Top Reel Views</p>
+            <div class="top-reels">
+                <div class="reel-chip" *ngFor="let reel of reels">{{reel}}<span>Views</span></div>
+            </div>
+        </div>
+    </div>
+</section>

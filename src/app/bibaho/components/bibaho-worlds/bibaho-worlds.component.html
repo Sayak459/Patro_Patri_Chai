@@ -1,0 +1,23 @@
+<section id="worlds" class="tone-ink bibaho-section" aria-label="Wedding Worlds">
+  <div class="section-inner">
+    <p class="eyebrow">Wedding Worlds</p>
+    <h2 class="worlds-heading">Step inside a world.</h2>
+    <div class="worlds-shell">
+      <div>
+        <div class="worlds-tiers" role="tablist" aria-label="Collection tier">
+          <button *ngFor="let tier of tiers" type="button" role="tab" [attr.aria-current]="tier.key === activeTier.key ? 'true' : 'false'" (click)="selectTier(tier)">{{tier.label}}</button>
+        </div>
+        <div class="worlds-themes" aria-label="Themes">
+          <button *ngFor="let theme of activeTier.themes; let i = index" type="button" [attr.aria-current]="i === activeThemeIndex ? 'true' : 'false'" (click)="selectTheme(i)">{{theme.name}}</button>
+        </div>
+      </div>
+      <div class="world-panel" [ngStyle]="{'background': 'linear-gradient(155deg,' + activeTier.a + ',' + activeTier.b + ')'}">
+        <div class="world-art" aria-hidden="true">✺</div>
+        <p class="world-blurb">{{activeTier.label}} Collection</p>
+        <h3 class="world-name">{{activeTheme.name}}</h3>
+        <p class="world-mood">{{activeTheme.mood}}</p>
+        <p class="world-status">The collection is taking shape · details are being crafted</p>
+      </div>
+    </div>
+  </div>
+</section>

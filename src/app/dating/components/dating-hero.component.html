@@ -1,0 +1,140 @@
+<section class="hero dating-cinematic-hero" id="home">
+
+  <div class="hero-reference-glow glow-a"></div>
+  <div class="hero-reference-glow glow-b"></div>
+
+  <!-- Floating sparkles -->
+  <div class="hero-reference-sparkles" aria-hidden="true">
+    <span>♥</span>
+    <span>♡</span>
+    <span>✦</span>
+    <span>♥</span>
+    <span>✧</span>
+    <span>♡</span>
+    <span>✦</span>
+  </div>
+
+  <!-- Left-side headline -->
+  <div class="hero-content-reference reveal" appReveal>
+
+    <p class="hero-kicker-reference">
+      A NEW KIND OF MATCHMAKING
+    </p>
+
+    <h1>
+      <span class="reference-white-title">India's #1</span>
+      <span class="reference-gold-title">Unscripted</span>
+      <span class="reference-script-title">Journey ♡</span>
+    </h1>
+
+    <p class="hero-subtitle-reference">
+      From <strong>connection</strong> to <b>celebration.</b>
+    </p>
+
+    <div class="hero-buttons-reference">
+
+      <button type="button" class="reference-primary-btn" (click)="register.emit()">
+        Your Story Could Be Next
+        <span>→</span>
+      </button>
+
+      <button type="button" class="reference-secondary-btn" (click)="scroll('about')">
+        Enter PPC
+      </button>
+
+    </div>
+
+    <div class="hero-stats-reference">
+      <span>SEASON 1</span>
+      <b>10.4M+ VIEWS</b>
+      <b>3M+ REACHED</b>
+    </div>
+
+  </div>
+
+  <!-- Right-side matchmaking journey -->
+  <div class="journey-art-reference reveal" appReveal aria-label="Patro Patri Chai wedding journey">
+
+
+    <!-- Animated arrow connecting the journey bubbles -->
+    <svg class="journey-arrow-svg" viewBox="0 0 1000 500" preserveAspectRatio="none" aria-hidden="true">
+
+      <defs>
+        <linearGradient id="journeyArrowGradient">
+          <stop offset="0%" stop-color="#fff8c7" />
+          <stop offset="42%" stop-color="#ffd34f" />
+          <stop offset="72%" stop-color="#ffb83d" />
+          <stop offset="100%" stop-color="#fff0a5" />
+        </linearGradient>
+
+        <marker id="journeyArrowHead" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"
+          markerUnits="userSpaceOnUse">
+
+          <path d="M0,0 L8,4 L0,8 Z" fill="#ffd34f" />
+        </marker>
+      </defs>
+
+      <!-- First row: left to right; then second row: right to left -->
+      <path class="journey-arrow-track" d="M 100 90
+       C 155 24, 235 24, 300 88
+       C 365 152, 430 156, 500 92
+       C 570 28, 635 25, 700 88
+       C 770 154, 845 150, 900 88
+       C 980 130, 980 205, 900 250
+       C 980 305, 980 380, 900 418
+       C 840 470, 770 466, 700 416
+       C 635 362, 565 358, 500 416
+       C 430 474, 360 467, 300 416
+       C 230 360, 155 360, 100 418" fill="none" stroke="url(#journeyArrowGradient)" stroke-width="4" stroke-linecap="round"
+        stroke-linejoin="round" marker-end="url(#journeyArrowHead)" />
+
+      <!-- Moving light follows the arrow -->
+      <path class="journey-arrow-light" d="M 100 90
+       C 155 24, 235 24, 300 88
+       C 365 152, 430 156, 500 92
+       C 570 28, 635 25, 700 88
+       C 770 154, 845 150, 900 88
+       C 980 130, 980 205, 900 250
+       C 980 305, 980 380, 900 418
+       C 840 470, 770 466, 700 416
+       C 635 362, 565 358, 500 416
+       C 430 474, 360 467, 300 416
+       C 230 360, 155 360, 100 418" fill="none" stroke="#ffe9a0" stroke-width="3" stroke-linecap="round" />
+    </svg>
+
+    <div class="hero-creator-signature">
+      <span class="creator-signature-kicker">A STORY OF</span>
+      <strong class="creator-love-line">Love, Laughter &amp; Happiness</strong>
+      <i aria-hidden="true">♥</i>
+    </div>
+
+    <div *ngFor="let item of nodes" class="journey-node-reference" [ngClass]="item[2]">
+
+      <div class="node-icon-reference">
+        <img *ngIf="item[2] === 'top-5'; else journeyIcon"
+          class="wedding-art-image" src="assets/biye.png"
+          alt="Bride and groom celebrating under a flower covered wedding mandap" />
+        <ng-template #journeyIcon><span>{{ item[1] }}</span></ng-template>
+      </div>
+
+      <strong *ngIf="item[2] !== 'top-5'">{{ item[0] }}</strong>
+
+    </div>
+
+    <!-- Floating hearts -->
+    <div class="journey-heart-reference heart-1">♥</div>
+    <div class="journey-heart-reference heart-2">♡</div>
+    <div class="journey-heart-reference heart-3">✦</div>
+    <div class="journey-heart-reference heart-4">♥</div>
+
+  </div>
+
+  <!-- Scroll indicator -->
+  <button type="button" class="hero-scroll-reference" (click)="scroll('about')" aria-label="Scroll to show information">
+
+    <span>SCROLL TO EXPLORE</span>
+    <b>↓</b>
+
+  </button>
+
+</section>

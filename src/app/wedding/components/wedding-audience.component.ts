@@ -1,0 +1,2 @@
+import { Component } from '@angular/core';
+@Component({selector:'app-wedding-audience',templateUrl:'./wedding-audience.component.html'}) export class WeddingAudienceComponent { stats=[['10.41M','Instagram Views'],['3.03M','Accounts Reached'],['79.6%','Audience Aged 18–34'],['64% / 36%','Women / Men'],['88.3%','India'],['9.1%','Bangladesh'],['9.6M','Reel Views'],['85.7%','Views From Non-Followers']]; reels=['1.6M','1.3M','938K','651K']; }

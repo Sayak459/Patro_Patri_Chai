@@ -1,0 +1,22 @@
+<section class="section dates-section" id="dates">
+    <div class="dates-glow"></div>
+    <div class="section-heading reveal" appReveal>
+        <div class="section-kicker"><span>03</span>
+            <p>THE SIX-DATE EXPERIENCE</p>
+        </div>
+        <h2>Six dates.<span> Six chances to feel something.</span></h2>
+        <p class="heading-description">No families. No group introductions. No one deciding what the connection should
+            look like. Just two people, one experience at a time.</p>
+    </div>
+    <div class="dates-grid">
+        <article *ngFor="let date of dates" class="date-card reveal" [ngClass]="date[3]" appReveal>
+            <div class="date-card-top"><span>{{date[0]}}</span><b>{{date[2]}}</b></div>
+            <div class="date-number-watermark">{{date[0]}}</div>
+            <h3>{{date[1]}}</h3>
+            <p>{{date[4]}}</p>
+            <div class="date-card-footer"><span>STEP {{date[0]}}</span><i>♡</i></div>
+        </article>
+    </div>
+    <div class="date-rule reveal" appReveal><span>ONE DATE</span><i>✦</i><strong>TWO PEOPLE</strong><i>✦</i><span>ZERO
+            SCRIPT</span></div>
+</section>

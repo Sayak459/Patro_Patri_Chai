@@ -1,0 +1,18 @@
+<div class="modal-backdrop" (mousedown)="$event.target === $event.currentTarget && close.emit()">
+    <div class="register-modal" role="dialog" aria-modal="true" aria-labelledby="register-title"><button
+            class="modal-close" (click)="close.emit()" aria-label="Close registration">×</button>
+        <div class="modal-logo"><img src="assets/ppc_logo.png" alt="Patro Patri Chai"></div>
+        <div class="modal-sticker">season 02? 👀</div>
+        <p class="eyebrow">PUT YOURSELF OUT THERE</p>
+        <h2 id="register-title">Maybe<span> you're next.</span></h2>
+        <p class="modal-intro">Don't try to sound perfect. Tell us who you actually are. ♡</p>
+        <form (ngSubmit)="submit()"><label>Your name<input required name="name" [(ngModel)]="name" type="text"
+                    placeholder="What should we call you?"></label><label>Email<input required name="email"
+                    [(ngModel)]="email" type="email" placeholder="you@example.com"></label><label>Phone<input required
+                    name="phone" [(ngModel)]="phone" type="tel" placeholder="Your phone number"></label><label>Tell us
+                something about you<textarea required name="about" [(ngModel)]="about" rows="4"
+                    placeholder="Something funny, random, honest or very you..."></textarea></label><button
+                class="btn btn-primary submit" type="submit">Send My Story<span>↗</span></button></form><small
+            class="modal-note">Demo registration form — connect this to your backend/API when ready.</small>
+    </div>
+</div>

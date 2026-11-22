@@ -1,0 +1,37 @@
+<footer class="dating-footer">
+    <div class="footer-main">
+        <div class="footer-brand-block">
+            <button class="footer-brand" (click)="scroll('home')" aria-label="Patro Patri Chai home">
+                <span class="footer-logo"><img src="sonya.jpg" alt=""></span>
+                <span class="footer-brand-copy"><strong>Patro Patri Chai</strong><small>REAL PEOPLE. REAL DATES. REAL STORIES.</small></span>
+            </button>
+            <p class="footer-tagline">A little chai. A little courage. A whole lot of possibility.</p>
+        </div>
+
+        <nav class="footer-nav" aria-label="Explore Patro Patri Chai">
+            <h2>EXPLORE</h2>
+            <div class="footer-links">
+                <button (click)="scroll('home')">Home</button>
+                <button (click)="scroll('about')">The Show</button>
+                <button (click)="scroll('journey')">How It Works</button>
+                <button (click)="scroll('dates')">The Dates</button>
+                <button (click)="scroll('rewards')">Experiences</button>
+                <button (click)="scroll('season-one')">Season 1</button>
+                <button (click)="scroll('participants')">Participant Reviews</button>
+                <button (click)="scroll('season-two')">Season 2</button>
+            </div>
+        </nav>
+
+        <div class="footer-cta">
+            <span class="footer-cta-kicker">YOUR STORY STARTS HERE</span>
+            <h2>Ready to meet?</h2>
+            <button class="footer-register" (click)="register.emit()">Register for PPC <span aria-hidden="true">&#8594;</span></button>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <span>&copy; 2026 Patro Patri Chai</span>
+        <span>Created by Sonya Chaterjee and Team</span>
+        <span>Made with Care and Love</span>
+    </div>
+</footer>

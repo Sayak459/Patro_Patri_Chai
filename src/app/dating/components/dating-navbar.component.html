@@ -1,0 +1,27 @@
+<header class="navbar" [class.menu-open]="menuOpen">
+  <div class="navbar-brand-group">
+    <button class="nav-back-link" routerLink="/" aria-label="Back to main page">← Back</button>
+  <button
+  class="brand"
+  (click)="scroll('home')"
+  aria-label="Go to Patro Patri Chai home">
+
+  <span class="brand-logo-wrap">
+    <img src="assets/sonya.jpg" alt="Patro Patri Chai" />
+  </span>
+  <span class="brand-text-reference"><strong>Patro Patri Chai</strong></span>
+
+</button>
+  </div>
+  <button class="mobile-menu" (click)="toggle()" aria-label="Toggle navigation"
+    [attr.aria-expanded]="menuOpen"><span></span><span></span><span></span></button>
+  <nav class="nav-links" [class.open]="menuOpen">
+    <button (click)="scroll('home')">PPC</button>
+    <button (click)="scroll('about')">Why Unscripted</button>
+    <button (click)="scroll('season-one')">Season 1</button>
+    <button (click)="scroll('season-two')">Season 2</button>
+    <button (click)="scroll('creator')">Creator</button>
+    <button (click)="scroll('participants')">Participants</button>
+    <button class="nav-cta" (click)="register.emit()">Apply Now</button>
+  </nav>
+</header>
